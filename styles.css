@@ -12,25 +12,68 @@ header {
     align-items: center;
     background-color: #ffffff; /* Vit bakgrund */
     padding: 1rem;
+    position: relative; /* Gör header-top till referens för mobile-nav */
 }
 .header-logo {
     max-width: 75px; /* Minskad med 50% från tidigare 150px */
     height: auto;
     margin-left: 20px; /* Avstånd från vänster kant */
 }
-nav {
+.hamburger {
+    display: none;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #000000;
+}
+.desktop-nav {
     flex-grow: 1;
     text-align: center;
 }
-nav a {
+.desktop-nav a {
     color: #000000; /* Svart text */
     text-decoration: none;
     margin: 0 1rem;
     font-size: 1.1rem;
 }
-nav a:hover {
+.desktop-nav a:hover {
     color: #bc8f8f; /* Hover-färg */
     text-decoration: underline;
+}
+.mobile-nav {
+    display: none;
+    flex-direction: column;
+    background-color: #ffffff;
+    position: absolute;
+    top: 100%; /* Placera direkt under header-top */
+    left: 0;
+    width: 100%;
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 10; /* Säkerställ att menyn är över andra element */
+}
+.mobile-nav.active {
+    display: flex;
+}
+.mobile-nav a {
+    color: #000000;
+    text-decoration: none;
+    padding: 0.5rem;
+    font-size: 1.1rem;
+}
+.mobile-nav a:hover {
+    color: #bc8f8f;
+    text-decoration: underline;
+}
+@media (max-width: 768px) {
+    .desktop-nav {
+        display: none;
+    }
+    .hamburger {
+        display: block;
+        margin-left: auto;
+    }
 }
 .video-container {
     position: relative;
@@ -68,19 +111,19 @@ nav a:hover {
     object-fit: cover;
     margin: 0; /* Säkerställer inget extra mellanrum */
 }
-.blues {
+.blues, .blue {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 1rem;
 }
-.halv1 {
+.halv1, .halv {
     flex: 1;
     min-width: 300px;
     background-color: rgba(0, 0, 0, 0.0); /* Transparent bakgrund */
     padding: 1rem;
 }
-.innerabout {
+.innerabout, .inner {
     max-width: 600px;
     margin: 0 auto;
 }
@@ -93,7 +136,7 @@ nav a:hover {
 }
 .ht p {
     font-size: 1rem;
-    text-align: left;
+    text-align: center;
     line-height: 1.6;
 }
 .img-r {
@@ -105,6 +148,20 @@ nav a:hover {
     width: 100%;
     height: auto;
     object-fit: cover;
+}
+.mobileHide {
+    flex: 1;
+    min-width: 300px;
+}
+.mobileHide img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+@media (max-width: 768px) {
+    .mobileHide {
+        display: none;
+    }
 }
 footer {
     background-color: #ffffff; /* Vit bakgrund */

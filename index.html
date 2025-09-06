@@ -10,10 +10,20 @@
 <body>
     <header>
         <div class="header-top">
-            <img src="https://uploads.staticjw.com/ta/tackochlovsalen/tackochlovsalenlogga.png" alt="Tackochlov Sälen Logga" class="header-logo">
-            <nav>
+            <img src="images/tackochlovsalenlogga.png" alt="Tackochlov Sälen Logga" class="header-logo">
+            <button class="hamburger"><i class="fa fa-bars"></i></button>
+            <nav class="desktop-nav">
                 <a href="index.html">Hem</a>
                 <a href="om-oss.html">Om oss</a>
+                <a href="lillagalleriet.html">Lilla Galleriet</a>
+                <a href="glashytta.html">Sälen Glashytta</a>
+                <a href="webshop.html">Webshop</a>
+                <a href="kontakt.html">Kontakt</a>
+            </nav>
+            <nav class="mobile-nav">
+                <a href="index.html">Hem</a>
+                <a href="om-oss.html">Om oss</a>
+                <a href="lillagalleriet.html">Lilla Galleriet</a>
                 <a href="glashytta.html">Sälen Glashytta</a>
                 <a href="webshop.html">Webshop</a>
                 <a href="kontakt.html">Kontakt</a>
@@ -27,11 +37,7 @@
         </div>
     </header>
     <section class="content">
-        <div class="image-grid">
-            <img src="https://uploads.staticjw.com/ta/tackochlovsalen/lillagalleriet001.jpg" alt="Nature" width="100%" height="auto">
-            <img src="https://uploads.staticjw.com/ta/tackochlovsalen/tackochlovsalenlogga.jpg" alt="Nature" width="100%" height="auto">
-            <img src="https://uploads.staticjw.com/ta/tackochlovsalen/clothes002.jpg" alt="Nature" width="100%" height="auto">
-        </div>
+        <div class="image-grid" id="home-image-grid"></div>
     </section>
     <footer>
         <div class="footfirst">
@@ -61,5 +67,20 @@
             <p class="small">&copy; 2025 Tackochlov Sälen. Alla rättigheter förbehållna.</p>
         </div>
     </footer>
+    <script src="images.js"></script>
+    <script src="menu.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const imageGrid = document.getElementById('home-image-grid');
+            homeImages.forEach(image => {
+                const img = document.createElement('img');
+                img.src = image.src;
+                img.alt = image.alt;
+                img.width = '100%';
+                img.height = 'auto';
+                imageGrid.appendChild(img);
+            });
+        });
+    </script>
 </body>
 </html>

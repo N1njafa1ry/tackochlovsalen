@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tackochlov Sälen - Lilla Galleriet</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-top">
+            <img src="images/tackochlovsalenlogga.png" alt="Tackochlov Sälen Logga" class="header-logo">
+            <button class="hamburger"><i class="fa fa-bars"></i></button>
+            <nav class="desktop-nav">
+                <a href="index.html">Hem</a>
+                <a href="om-oss.html">Om oss</a>
+                <a href="lillagalleriet.html">Lilla Galleriet</a>
+                <a href="glashytta.html">Sälen Glashytta</a>
+                <a href="webshop.html">Webshop</a>
+                <a href="kontakt.html">Kontakt</a>
+            </nav>
+            <nav class="mobile-nav">
+                <a href="index.html">Hem</a>
+                <a href="om-oss.html">Om oss</a>
+                <a href="lillagalleriet.html">Lilla Galleriet</a>
+                <a href="glashytta.html">Sälen Glashytta</a>
+                <a href="webshop.html">Webshop</a>
+                <a href="kontakt.html">Kontakt</a>
+            </nav>
+        </div>
+        <div class="video-container">
+            <video autoplay muted loop playsinline class="header-video">
+                <source src="https://uploads.staticjw.com/ta/tackochlovsalen/tackolovsalen_010.mp4" type="video/mp4">
+                Din webbläsare stöder inte videouppspelning.
+            </video>
+        </div>
+    </header>
+    <section class="content">
+        <div class="row blues">
+            <div class="img-r" id="gallery-image-1"></div>
+            <div class="col halv">
+                <div class="inner">
+                    <div class="ht">
+                        <h2 align="center">Lilla Galleriet</h2>
+                        <p align="center">Längst in i våran butik har vi det nyöppnade "Lilla Galleriet" <br> Ta <a href="kontakt.html">kontakt</a> med oss om du önskar att ställa ut din konst där.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="mobileHide" id="gallery-image-2"></div>
+        </div>
+        <div class="row blue">
+            <div class="img-r" id="gallery-image-3"></div>
+            <div class="col halv">
+                <div class="inner">
+                    <div class="ht">
+                        <h2 align="center">Tony Ekström</h2>
+                        <p align="center">Under några veckor fram över så kommer ni kunna ta del av Tony Ekströms (<a href="https://www.instagram.com/azfotosalen/">@azfotosalen</a>) alster</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footfirst">
+            <div class="elva">
+                <div class="row">
+                    <div class="col">
+                        <h4>Kontakta oss</h4>
+                        <p>Tackochlov Sälen<br>Centrumhuset<br>780 67 Sälen</p>
+                        <p><i class="fa fa-envelope" style="font-size:24px"></i> <a href="mailto:tackochlovsalen@gmail.com">tackochlovsalen@gmail.com</a></p>
+                        <p><i class="fa fa-phone" style="font-size:24px"></i> 070 - 5433334</p>
+                    </div>
+                    <div class="col">
+                        <h4>Öppettider</h4>
+                        <p>Måndag - Fredag, Kl 10-18</p>
+                        <p>Lördag, Kl 10-15</p>
+                        <p>Söndag, Stängt</p>
+                    </div>
+                    <div class="col">
+                        <h4>Social</h4>
+                        <p><i class="fa fa-facebook"></i> <a href="https://www.facebook.com/search/top?q=tackochlov%20sälen">Tackochlov Sälen</a></p>
+                        <p><i class="fa fa-instagram"></i> <a href="https://www.instagram.com/tack_och_lov_salen/">Tack_och_lov_salen</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footsecond center">
+            <p class="small">&copy; 2025 Tackochlov Sälen. Alla rättigheter förbehållna.</p>
+        </div>
+    </footer>
+    <script src="images.js"></script>
+    <script src="menu.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const galleryImage1 = document.getElementById('gallery-image-1');
+            const galleryImage2 = document.getElementById('gallery-image-2');
+            const galleryImage3 = document.getElementById('gallery-image-3');
+            
+            const img1 = document.createElement('img');
+            img1.src = galleryImages[0].src;
+            img1.alt = galleryImages[0].alt;
+            img1.width = '100%';
+            img1.height = 'auto';
+            galleryImage1.appendChild(img1);
+
+            const img2 = document.createElement('img');
+            img2.src = galleryImages[1].src;
+            img2.alt = galleryImages[1].alt;
+            img2.width = '100%';
+            img2.height = 'auto';
+            galleryImage2.appendChild(img2);
+
+            const img3 = document.createElement('img');
+            img3.src = galleryImages[2].src;
+            img3.alt = galleryImages[2].alt;
+            img3.width = '100%';
+            img3.height = 'auto';
+            galleryImage3.appendChild(img3);
+        });
+    </script>
+</body>
+</html>
