@@ -87,9 +87,9 @@ header {
     object-fit: cover;
 }
 .content {
-    max-width: 1200px;
-    margin: 2rem auto;
-    padding: 0 1rem;
+    width: 100%; /* Ta bort max-width för full bredd */
+    margin: 0; /* Ta bort marginal för att eliminera mellanrum från videon */
+    padding: 0;
 }
 .content h2 {
     color: #2e4a2e;
@@ -106,7 +106,6 @@ header {
 }
 .image-grid img {
     width: 33.333%; /* Varje bild tar upp en tredjedel av bredden */
-    max-width: 400px;
     height: auto;
     object-fit: cover;
     margin: 0; /* Säkerställer inget extra mellanrum */
