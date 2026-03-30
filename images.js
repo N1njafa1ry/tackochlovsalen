@@ -9,7 +9,7 @@
 // Images for the homepage (index.html)
 const homeImages = [
     { src: 'images/tackochlovsalen001.jpg', alt: 'Nature' },
-    { src: 'images/tackochlovsalenlogga.jpg', alt: 'Nature' },
+    { src: 'images/oppettiderpask.jpg', alt: 'Nature' },
     { src: 'images/tackochlovsalen002.jpg', alt: 'Nature' }
 ];
 
