@@ -10,7 +10,7 @@
 const homeImages = [
     { src: 'images/tackochlovsalen001.jpg', alt: 'Nature' },
     { src: 'images/oppettiderpask.jpg', alt: 'Nature' },
-    { src: 'images/tackochlovsalen002.jpg', alt: 'Nature' }
+    { src: 'images/led001.jpg', alt: 'Nature' }
 ];
 
 // Images for the "Om oss" page (om-oss.html)
