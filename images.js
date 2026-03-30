@@ -8,9 +8,9 @@
 
 // Images for the homepage (index.html)
 const homeImages = [
-    { src: 'images/lillagalleriet001.jpg', alt: 'Nature' },
+    { src: 'images/tackochlovsalen001.jpg', alt: 'Nature' },
     { src: 'images/tackochlovsalenlogga.jpg', alt: 'Nature' },
-    { src: 'images/clothes002.jpg', alt: 'Nature' }
+    { src: 'images/tackochlovsalen002.jpg', alt: 'Nature' }
 ];
 
 // Images for the "Om oss" page (om-oss.html)
